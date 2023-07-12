@@ -1,0 +1,8 @@
+:host {
+    font-family: 'Lato', 'Arial', sans-serif;
+    text-align: center;
+}
+h1 {
+    margin: 0 0 24px;
+    border-bottom: solid 1px #cecece;
+}

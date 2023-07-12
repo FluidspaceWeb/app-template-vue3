@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>My Module | Fluidspace</title>
+		<script src="http://localhost:1822/js/ModuleDataAPI.js" type="text/javascript"></script>
+		<script src="http://localhost:1822/js/ModulePropsAPI.js" type="text/javascript"></script>
+		<script src="http://localhost:1822/js/Bus.js" type="text/javascript"></script>
+		<script src="http://localhost:1822/js/Module.js" type="text/javascript"></script>
+		<script id="appConfig" type="application/json">
+			{
+				"serverUrl": "http://localhost:1822",
+				"module": {
+				"id": "llzD4Kj0m8hw6X69nMvw",
+				"namespace": "namespace",
+				"name": "modulename",
+				"displayName": "My Module",
+				"dataset_id": "6231fd0324f21-9f41d1"
+				}
+			}
+		</script>
+
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				background-color: #333;
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.module {
+				height: 90vh;
+				width: 90%;
+				background-color: #fff;
+				border-radius: 7px;
+				padding: 1rem;
+				box-sizing: border-box;
+			}
+
+			.moduleElement {
+				display: block;
+				overflow: auto;
+				height: 100%;
+				width: 100%;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="module">
+			<module-namespace_modulename
+				class="moduleElement"
+				data-mid=""
+				dsid=""
+				view-select="9"
+				period-start=""
+				period-end="">
+			</module-namespace_modulename>
+		</div>
+
+		<script type="module" src="/src/main.js"></script>
+		<script src="./testbench.js" type="text/javascript"></script>
+	</body>
+
+</html>
