@@ -24,7 +24,7 @@ Due to the nature of current build process, the built (dist) files may not be di
 
 
 ## 🔴 Pre-requisites
-- Installed and running [Fluidspace Development Server](https://)
+- Installed and running [Fluidspace Development Server](https://github.com/rishiktiwari/fluidspace-development-server)
 - Node.js v18+
 - Copy of this repo
 
@@ -65,6 +65,7 @@ Due to the nature of current build process, the built (dist) files may not be di
     {
         "serverUrl": "http://localhost:1822",
         "module": {
+            "id": "<valid module id>",
             "namespace": "<namespace>",
             "name": "<modulename>",
             "displayName": "<My Module>"
