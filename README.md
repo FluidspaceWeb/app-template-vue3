@@ -24,7 +24,7 @@ Due to the nature of current build process, the built (dist) files may not be di
 
 
 ## 🔴 Pre-requisites
-- Installed and running [Fluidspace Development Server](https://github.com/rishiktiwari/fluidspace-development-server)
+- Installed and running [Fluidspace Development Server](https://github.com/FluidspaceWeb/development-server)
 - Node.js v18+
 - Copy of this repo
 

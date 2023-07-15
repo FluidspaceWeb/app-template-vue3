@@ -59,7 +59,7 @@ function refresh() { ... }
 
 ## 🤝 Glue Definition
 
-The `Glue` object contains several properties and methods to "***glue***" the module with Fluidspace environment and its features. The environment vie Glue acts as proxy between module and server to trigger other events, handle error and other redundant aspects.
+The `Glue` object contains several properties and methods to "***glue***" the module with Fluidspace environment and its features. The environment via Glue acts as proxy between module and server to trigger other events, handle error and other redundant aspects.
 
 The `Glue` object is provided as 2nd parameter to the method defined in `init` as outcome of module's `register-app` event.
 
