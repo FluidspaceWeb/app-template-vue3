@@ -1,5 +1,4 @@
 (function () {
-    //DEFINE THIS FOR ALL MODULES
     const appConfig = JSON.parse(document.getElementById('appConfig').text);
     const moduleConfig = appConfig.module;
 
@@ -18,15 +17,29 @@
         }
     };
 
-    //REST IS FILLED WITH DUMMY DATA
     const mod_fullname = (moduleConfig.namespace + '_' + moduleConfig.name).toLowerCase();
     const tagName = 'module-' + mod_fullname;
+    
+    let moduleDiv = document.createElement('div');
+        moduleDiv.className = 'module';
+    let moduleDom = `
+			<${tagName}
+				class="moduleElement"
+				data-mid="${moduleConfig.id}"
+				dsid="${moduleConfig.dataset_id}"
+				view-select="9"
+				period-start=""
+				period-end="">
+			</${tagName}>
+    `;
+    moduleDiv.innerHTML = moduleDom;
+    document.body.appendChild(moduleDiv);
+
+    //REST IS FILLED WITH DUMMY DATA
     const modules = document.getElementsByTagName(tagName);
 
     for (let i = 0; i < modules.length; i++) {
         let mod = modules[i];
-        mod.setAttribute('data-mid', moduleConfig.id);      // for dev purpose only
-        mod.setAttribute('dsid', moduleConfig.dataset_id);  // for dev purpose only
 
         mod.addEventListener("register-app", (args) => {
             const detail = args["detail"][0];
@@ -49,17 +62,16 @@
             window.App['Modules'][randomPageId][detail['id']] = detail;
             console.log('-> testbench conf loaded');
 
-            console.log('-> invoking module init()');
-            let dsid = mod.getAttribute('dsid');
-
             // INITIALISE THE MODULE
-            detail.init(dsid, Module({
+            console.log('-> invoking module init()');
+            detail.init(moduleConfig.dataset_id, Module({
                 'module_id': detail['id'],
                 'page_id': randomPageId,
-                'dataset_id': dsid,
+                'dataset_id': moduleConfig.dataset_id,
                 'permission_mode': 9
             }));
         });
+
         mod.addEventListener("show-toast", (args) => {
             args.stopPropagation();
             console.log("Event show-toast args: ", args['detail']);

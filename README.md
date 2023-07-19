@@ -35,6 +35,12 @@ Due to the nature of current build process, the built (dist) files may not be di
 </details>
 
 ## 🟡 Pre-development
+
+### ⬇️ Download Template
+```sh
+git clone https://github.com/FluidspaceWeb/app-template-vue3.git
+```
+
 > **If your module needs database**
 >
 > Navigate to the *Fluidspace Development Server* web page (default [localhost:1822](http://localhost:1822)) and create a new collection for your module's data.
@@ -58,7 +64,7 @@ Due to the nature of current build process, the built (dist) files may not be di
 </div>
 </details>
 
-### 📄 Module Configuration
+### 📄 Template Configuration
 
 1. Open the [index.html](index.html) and set the following parameters:
     ```json
@@ -72,11 +78,16 @@ Due to the nature of current build process, the built (dist) files may not be di
         }
     }
     ```
-    If the module uses database then ensure ```namespace``` and ```name``` matches the Database collection name.
+    If the module uses database then ensure `namespace` and `name` matches the Database collection name.
 
-2. Rename the HTML tag ```module-namespace_modulename``` to match the above names while maintaining the format.
+2. Open [main.js](src/main.js) and set the **namespace** and **modulename** in the following line:
+    ```js
+    customElements.define("module-<namespace>_<modulename>", ...)
+    ```
 
-3. Open [Factory.js](src/shared/Factory.js) and set the ```MODULE_ID``` to the generated ID from previous step.
+3. Similarly, open [App.ce.vue](src/App.ce.vue) and set in **namespace** and **mod_name** in `onMounted()`.
+
+4. Open [Factory.js](src/shared/Factory.js) and set the `MODULE_ID` to the generated ID from previous step.
 
 ## 🟢 Development Setup
 ```sh
