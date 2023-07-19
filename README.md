@@ -14,7 +14,9 @@ The Vite bundling and build configuration are already defined, we recommend to n
 
 The final build is an IIFE with .js in *dist/js/* and all the static assets in *dist/assets/* directory.
 Due to the nature of current build process, the built (dist) files may not be directly servable (i.e. independent of Fluidspace Environment).
-</details>
+</details><br>
+
+Configuring & using template video guide: [YouTube](https://youtu.be/BsAzDJM5ILk)
 
 ## 🔖 Docs Index
 * [What is Fluidspace?](https://gist.github.com/rishiktiwari/645f48422aad7ca7781d1142b3f3b1bd)
